@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register Home Service</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" type="image/png" href="http://localhost/projetA/ProjetA/images/icons/favicon.ico"/>
+
+		<link rel="stylesheet" type="text/css" href="http://localhost/projetA/ProjetA/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type="text/css" href="http://localhost/projetA/ProjetA/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+		<link rel="stylesheet" type="text/css" href="http://localhost/projetA/ProjetA/css/util.css">
+
+		<link rel="stylesheet" type="text/css" href="http://localhost/projetA/ProjetA/css/main.css">
+
+	<link href="http://localhost/projetA/ProjetA/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://localhost/projetA/ProjetA/css/carousel.css" rel="stylesheet">
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="http://localhost/projetA/ProjetA/css/index.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!--	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+
+</head>
+<body>
+
+<header id="header"></header>
+	
+	<div class="limiter">
+		<div class="login">
+			<div class="wrap-login p-l-50 p-r-50 p-t-77 p-b-30">
+				<div class="login-form validate-form">
+					<span class="login-form-title p-b-55">
+						REGISTER
+					</span>
+
+						<div class="wrap-input validate-input m-b-30" data-validate = "Name is required">
+							<input class="input" type="text" id="name"name="name" placeholder="Name">
+							<span class="focus-input"></span>
+							<span class="symbol-input">
+								<span class="lnr lnr-user"></span>
+							</span>
+							<div class="errorInput" id="nameError">
+								Nom non valide.
+							</div>
+						</div>
+
+					<div class="wrap-input validate-input m-b-30" data-validate = "Surname is required">
+						<input class="input" type="text" id="firstName" name="firstname" placeholder="FirstName">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-user"></span>
+						</span>
+						<div class="errorInput" id="firstNameError">
+							Prénom non valide.
+						</div>
+					</div>
+					<div class="wrap-input validate-input m-b-30" data-validate = "Valid email is required: Talioh@abc.xyz">
+						<input class="input" type="text" id="mail" name="email" placeholder="Email">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-envelope"></span>
+						</span>
+						<div class="errorInput" id="mailError">
+							Mail non valide.
+						</div>
+						<div class="errorInput" id="mailExist">
+							Mail déja existant.
+						</div>
+					</div>
+
+					<div class="wrap-input validate-input m-b-30"  data-validate = "Birth Date is required">
+						<input class="input" type="date" id="dateBorn"name="birth" >
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-heart"></span>
+						</span>
+						<div class="errorInput" id="errorDate">
+							date non valide.
+						</div>
+						<div class="errorInput" id="tooYoung">
+							Vous etes trop jeune pour utiliser nos service.
+						</div>
+					</div>
+
+					<div class="wrap-input validate-input m-b-30" data-validate = "Phone Number is required">
+						<input class="input" type="tel" name="phone" id="tel"placeholder="Phone ex: 0654846578">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-phone"></span>
+						</span>
+						<div class="errorInput" id="telError">
+							Numero de téléphone non valide.
+						</div>
+					</div>
+					<div class="wrap-input validate-input m-b-30" data-validate = "Address is required">
+						<input class="input" type="text" name="address" id="address" placeholder="Address">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-home"></span>
+						</span>
+						<div class="errorInput" id="addressError">
+							Adresse non valide.
+						</div>
+					</div>
+
+					<div class="wrap-input validate-input m-b-30" style="margin-left: 25%"data-validate = "Postal Code is required">
+						<input class="input" type="text" name="postalCode" id="postalCode" placeholder="Postal Code">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-home"></span>
+						</span>
+						<div class="errorInput" id="postalCodeError">
+							code postal non valide.
+						</div>
+					</div>
+
+
+					<div class="wrap-input validate-input m-b-50" data-validate = "Passsword is required">
+						<input class="input" type="password" name="password" id="password" placeholder="Password">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-home"></span>
+						</span>
+						<div class="errorInput" id="passwordError">
+							Votre mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre.
+						</div>
+					</div>
+
+					<div class="wrap-input validate-input m-b-30" >
+						<input class="input" type="password" name="confirmPassword" id="confirmPass" placeholder="Password Verification">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
+							<span class="lnr lnr-home"></span>
+						</span>
+						<div class="errorInput" id="confirmPassError">
+							Les mots de passe ne sont pas identique.
+						</div>
+					</div>
+
+					
+
+				
+					
+
+					
+										<div class="container-login-form-btn p-t-25">
+						<button onclick="validateInscription()" class="login-form-btn">
+							Register
+						</button>
+					</div>
+
+					<div class="text-center w-full p-t-42 p-b-22">
+						<span class="txt1">
+							Or register with
+						</span>
+					</div>
+
+					<a href="#" class="btn-face m-b-10">
+						<i class="fa fa-facebook-official"></i>
+						Facebook
+					</a>
+
+					<a href="#" class="btn-google m-b-10">
+						<img src="../../images/icons/icon-google.png" alt="GOOGLE">
+						Google
+					</a>
+
+					<div class="text-center w-full p-t-115">
+						<span class="txt1">
+							Already a member?
+						</span>
+
+						<a class="txt1 bo1 hov1" href="#">
+							Sign in						
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--	<script src="https://www.google.com/recaptcha/api.js?render=_6LdCfucUAAAAAPof4hmouH-ZmBMlv5XhJgXMVMoo"></script>-->
+<!--	<script>-->
+<!--		grecaptcha.ready(function() {-->
+<!--			grecaptcha.execute('6LdCfucUAAAAAPof4hmouH-ZmBMlv5XhJgXMVMoo', {action: 'homepage'}).then(function(token) {-->
+
+<!--			});-->
+<!--		});-->
+<!--	</script>-->
+
+	<script src="http://localhost/projetA/ProjetA/jquery/jquery-3.2.1.min.js"></script>
+<script>
+	isCo();
+	function isCo(){
+
+		let option = {
+			url: 'http://localhost/projetA/pomocServicesAPI/api/acountManage/isCo.php',
+			dataType: 'text',
+			type: "POST",
+			success: function(data, status, xhr){
+				$('#header').html(xhr.responseText);
+			},
+			error: function(xhr, status, error){;
+				$('#header').html(xhr.responseText);
+			}
+		};
+
+		$.ajax(option);
+	}
+</script>
+
+	<script type="text/javascript">
+// function validateInscription(){
+//         var form = new FormData();
+//
+//         form.append('name',$('#name').val());
+//         form.append('firstName',$('#firstName').val());
+//         form.append('mail',$('#mail').val());
+//         form.append('dateBorn',$('#dateBorn').val());
+//         form.append('tel',$('#tel').val());
+//
+//         console.log($('#tel').val());
+//         form.append('address',$('#address').val());
+//         form.append('postalCode',$('#postalCode').val());
+//         form.append('password',$('#password').val());
+//         form.append('confirmPass',$('#confirmPass').val());
+//
+//         var error = {};
+//         var xhr = new XMLHttpRequest();
+//         //xhr.responseType = '';
+//         xhr.onreadystatechange = function () {
+//             if (xhr.readyState == 4 && xhr.status == 200){
+//                 console.log((xhr.responseText)); // Traitement JSON
+//                 console.log(xhr.responseText);
+//             }
+//         };
+//
+//         xhr.open('POST', 'http://localhost/projetA/PomocServicesAPI/API/register/register.php', true);
+//         xhr.send(form);
+//         console.log(error);
+//         console.log(JSON.stringify(error));
+//     }
+
+    function validateInscription(){
+		var data = {
+			name: $('#name').val(),
+			firstName: $('#firstName').val(),
+			mail: $('#mail').val(),
+			dateBorn: $('#dateBorn').val(),
+			tel: $('#tel').val(),
+			address: $('#address').val(),
+			postalCode: $('#postalCode').val(),
+			password: $('#password').val(),
+			confirmPass: $('#confirmPass').val()
+		};
+
+		var option = {
+			url: '../../../pomocServicesAPI/api/register/register.php',
+			dataType: 'text',
+			type: "POST",
+			data: {data: JSON.stringify(data)},
+			success: function(data, status, xhr){
+				 window.location.replace("http://localhost/projetA/ProjetA/php/serviceRequest.php");
+			},
+			error: function(xhr, status, error){;
+				if(xhr.status == 402){
+					console.log(xhr.responseText);
+					showError(JSON.parse(xhr.responseText));
+				}
+
+			}
+		};
+
+		$.ajax(option);
+	}
+
+	function showError(error){
+    	for(let i = 0; i < Object.keys(error).length; i++){
+    		switch(error[i]){
+    			case 'nameError':
+    				$('#nameError').show();
+    				break;
+				case 'firstNameError':
+					$('#firstNameError').show();
+					break;
+				case 'nameError':
+					$('#nameError').show();
+					break;
+				case 'mailError':
+					$('#mailError').show();
+					break;
+				case 'mailExist':
+					$('#mailExist').show();
+					break;
+				case 'dateError':
+					$('#errorDate').show();
+					break;
+				case 'tooYoung':
+					$('#tooYoung').show();
+					break;
+				case 'telError':
+					$('#telError').show();
+					break;
+				case 'addressError':
+					$('#addressError').show();
+					break;
+				case 'postalCodeError':
+					$('#postalCodeError').show();
+					break;
+				case 'passwordError':
+					$('#passwordError').show();
+					break;
+				case 'confirmPassError':
+					$('#confirmPassError').show();
+					break;
+			}
+		}
+	}
+
+
+
+
+	</script>
+
+</body>
+</html>

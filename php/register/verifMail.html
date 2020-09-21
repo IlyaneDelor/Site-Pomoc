@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="icon" type="image/png" href="../../images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../../fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../../css/util.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+</head>
+<body>
+<div class="limiter">
+    <div class="login">
+        <div class="wrap-login p-l-50 p-r-50 p-t-77 p-b-30">
+            <!--				<form class="login-form validate-form">-->
+            <span class="login-form-title p-b-55">
+						Verification de l'email
+					</span>
+
+            <div class="validate-input m-b-16" data-validate = "Password is required">
+                <input class="input" type="text" id="verifMail" placeholder="code recu par mail">
+                <span class="focus-input"></span>
+                <span class="symbol-input">
+							<span class="lnr lnr-lock"></span>
+						</span>
+            </div>
+
+            <div class="container-login-form-btn p-t-25" onclick="sendMailCode()">
+                <button class="login-form-btn">
+                    Verifié
+                </button>
+            </div>
+
+            <div>
+
+            </div>
+
+
+
+            <!--				</form>-->
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="../../jquery/jquery-3.2.1.min.js"></script>
+
+<script>
+    mailIsOk();
+
+    function mailIsOk(){
+        let option = {
+            url: '../../../pomocServicesAPI/api/acountManage/verifMail.php',
+            dataType: 'text',
+            type: 'POST',
+            success: function(data, status, xhr){
+                window.location.replace("http://localhost/projetA/ProjetA/php/index.html");
+            },
+            error: function(xhr, status, error){
+                if(xhr.status == 400){
+                    window.location.replace("http://localhost/projetA/ProjetA/php/login.html");
+                }
+                if(xhr.status == 401){
+                    sendMailCode();
+                }
+            }
+        };
+
+        $.ajax(option);
+    }
+
+    function sendMailCode(){
+        let data = {
+            verifMail: $('#verifMail').val()
+        };
+
+        let option = {
+            url: '../../../pomocServicesAPI/api/acountManage/sendMailCode.php',
+            dataType: 'text',
+            type: 'POST',
+            data: {data: JSON.stringify(data)},
+            success: function(data, status, xhr){
+                window.location.replace("http://localhost/projetA/ProjetA/php/index.html");
+            },
+            error: function(xhr, status, error){
+
+            }
+        };
+
+        $.ajax(option);
+
+
+    }
+
+
+</script>
